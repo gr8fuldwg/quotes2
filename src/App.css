@@ -38,7 +38,11 @@
 #buttons {
   margin-top: 4rem;
   justify-content: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+#inspiration {
+  margin-left: 2rem !important;
 }
 
 .quote {
@@ -75,9 +79,16 @@
   opacity: 1;
 }
 
+#kGray {
+  display: block;
+  justify-content: center;
+  margin-left: 7rem  !important;
+}
+
 .grey-after:after {
   /* color: rgb(50, 50, 40); */
-  color: purple
+  color: purple;
+  justify-content: center;
 }
 
 .chuckbutton {

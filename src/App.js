@@ -25,7 +25,7 @@ class App extends Component {
     this.kanye = this.kanye.bind(this);
     this.dogs = this.dogs.bind(this);
     this.toggleContent = this.toggleContent.bind(this);
-    this.mount = this.componentDidMount.bind(this);
+    this.mount = this.componentWillMount.bind(this);
   }
 
   makeGray() {
@@ -45,7 +45,7 @@ class App extends Component {
   }
 
   // Dog Photo Axios GET request
-  async componentWillMount() {
+  async componentDidMount() {
     await axios
       .get(DOGS_API)
       .then((response) => {
@@ -102,7 +102,7 @@ class App extends Component {
       });
   }
 
-  async componentDidMount() {
+  async componentWillMount() {
     await axios
       .get(QUOTE_API)
       .then((response) => {
@@ -185,9 +185,9 @@ class App extends Component {
 
           {/* Inspiration */}
           <button
-            // id="inspiration"
+            id="inspiration"
             type="button"
-            className="inspire btn btn-dark "
+            className="inspire ml-2 btn btn-dark "
             onClick={this.mount}
           >
             Inspire
