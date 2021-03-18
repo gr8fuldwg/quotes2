@@ -25,6 +25,7 @@ class App extends Component {
     this.kanye = this.kanye.bind(this);
     this.dogs = this.dogs.bind(this);
     this.toggleContent = this.toggleContent.bind(this);
+    this.mount = this.componentDidMount.bind(this);
   }
 
   makeGray() {
@@ -32,13 +33,8 @@ class App extends Component {
     var color = k.style.color;
     k.addEventListener("click", function () {
       // this function executes whenever the user clicks the button
-      console.log("yes");
       color = k.style.color = color === "grey";
     });
-  }
-
-  handleClick() {
-    console.log("this is:", this);
   }
 
   toggleContent(event) {
@@ -49,11 +45,10 @@ class App extends Component {
   }
 
   // Dog Photo Axios GET request
-  componentDidMount() {
-    axios
+  async componentWillMount() {
+    await axios
       .get(DOGS_API)
       .then((response) => {
-        // console.log(response.data);
         this.setState({ imageURL: response.data.message });
       })
       .catch((error) => {
@@ -71,7 +66,6 @@ class App extends Component {
           imageURL: response.data.message,
           error: null,
         });
-        console.log(response.data);
       })
 
       .catch((err) => {
@@ -83,24 +77,21 @@ class App extends Component {
   }
 
   // 'Inspirational Quotes' Axios GET method
+
   quote() {
     axios
       .get(QUOTE_API)
       .then((response) => {
-        // const { quotes } = response.data.data[0].quoteText;
         const { quoteText } = response.data.data[0].quoteText;
         const { quoteAuthor } = response.data.data[0].quoteAuthor;
-
-        console.log(response.data.data[0].quoteText);
-        console.log(response.data.data[0].quoteAuthor);
-
         this.setState({
-          // quotes: quotes,
           quoteText: quoteText,
           quoteAuthor: quoteAuthor,
           hyphen: " -",
           error: null,
         });
+        console.log(response.data.data[0].quoteText);
+        console.log(response.data.data[0].quoteAuthor);
       })
 
       .catch((err) => {
@@ -108,6 +99,22 @@ class App extends Component {
           error: err,
         });
         console.log("error");
+      });
+  }
+
+  async componentDidMount() {
+    await axios
+      .get(QUOTE_API)
+      .then((response) => {
+        console.log(response.data.data[0].quoteText);
+        console.log(response.data.data[0].quoteAuthor);
+        this.setState({
+          quoteText: response.data.data[0].quoteText,
+          quoteAuthor: response.data.data[0].quoteAuthor,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }
 
@@ -157,6 +164,7 @@ class App extends Component {
   render() {
     const { imageURL } = this.state;
     const { showContent } = this.state;
+
     return (
       <div className="body">
         <h1 className="head">A wise dog once said...</h1>
@@ -177,10 +185,10 @@ class App extends Component {
 
           {/* Inspiration */}
           <button
-            id="inspiration"
+            // id="inspiration"
             type="button"
             className="inspire btn btn-dark "
-            onClick={this.quote}
+            onClick={this.mount}
           >
             Inspire
           </button>
@@ -207,9 +215,7 @@ class App extends Component {
         {/* **** QUOTES **** */}
 
         {/* Inspiration */}
-        <h1 className="quote d-flex pt-4">{this.state.quoteAuthor}</h1>
-        <h1>{this.state.res}</h1>
-
+        <h1 className="quote d-flex pt-4">{this.state.quoteText}</h1>
         <h3 className="fade1 name d-flex pb-4">
           {this.state.hyphen}
           {this.state.quoteAuthor}
