@@ -106,11 +106,10 @@ class App extends Component {
     await axios
       .get(QUOTE_API)
       .then((response) => {
-        console.log(response.data.data[0].quoteText);
-        console.log(response.data.data[0].quoteAuthor);
-        this.setState({
+       this.setState({
           quoteText: response.data.data[0].quoteText,
           quoteAuthor: response.data.data[0].quoteAuthor,
+          hyphen: "- ",
         });
       })
       .catch((error) => {
@@ -215,7 +214,7 @@ class App extends Component {
         {/* **** QUOTES **** */}
 
         {/* Inspiration */}
-        <h1 className="quote d-flex pt-4">{this.state.quoteText}</h1>
+        <h1 className="quote d-flex pt-4">"{this.state.quoteText}"</h1>
         <h3 className="fade1 name d-flex pb-4">
           {this.state.hyphen}
           {this.state.quoteAuthor}
@@ -229,19 +228,24 @@ class App extends Component {
         ) : (
           ""
         )}
-        <button
-          type="button"
-          id="kGray"
-          className="btn btn-outline-primary"
-          onClick={() => this.makeGray()}
-        >
-          <h3
-            onClick={this.toggleContent.bind(this)}
-            className="grey-after fade2 test kanye d-flex pb-4"
-          >
-            {this.state.name}
-          </h3>
-        </button>
+
+        <div className="d-flex row ">
+          <div className="d-flex col justify-content-center text-center ">
+            <button
+              type="button"
+              id="kGray"
+              className="btn btn-outline-primary "
+              onClick={() => this.makeGray()}
+            >
+              <h3
+                onClick={this.toggleContent.bind(this)}
+                className="grey-after pt-4 fade2 kanye d-flex pb-4"
+              >
+               {this.state.name}
+              </h3>
+            </button>
+          </div>
+        </div>
 
         {/* Chuck */}
         <h1 className="fade3 chaz d-flex pt-4 pb-4">{this.state.value}</h1>
