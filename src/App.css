@@ -71,7 +71,7 @@ body {
   margin-right: 4rem;
   color: white;
   font-weight: 500;
-  font-family: fantasy;
+  font-family: cursive;
 }
 
 .name {
@@ -87,8 +87,8 @@ body {
   margin-right: 4rem;
   padding-bottom: 4rem;
   color: red;
-  font: .75em;
-  font-family: fantasy;
+  font: 1em;
+  font-family: sans-serif;
 }
 
 .kanye {
