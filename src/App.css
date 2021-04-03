@@ -1,22 +1,43 @@
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+.btn {
+  display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    /* user-select: none; */
+    border: 1px solid inherit;
+    padding: 1%;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
 .body {
   background-color: black;
   color: white;
   max-width: 100%;
-  /* height: 120vh; */
   width: 100%;
+  position: relative !important;
 }
 
 .head {
   display: flex;
   justify-content: center;
-  
   font-family: fantasy;
   font-size: 1.8rem;
   font-weight: 700;
   padding-top: 2rem;
   margin-right: 2.5rem;
   margin-left: 2.5rem;
-  /* position: sticky; */
   top: 0;
   background-color: transparent;
 }
@@ -28,7 +49,6 @@
   margin-right: auto;
   padding-bottom: 20px;
   padding-top: 20px;
-  /*  */
   max-height: 22rem;
   min-width: 20rem;
   min-height: 20rem;
@@ -37,7 +57,7 @@
 #buttons {
   margin-top: 4rem;
   justify-content: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 #inspiration {
@@ -51,7 +71,7 @@
   margin-right: 4rem;
   color: white;
   font-weight: 500;
-  font-family: cursive;
+  font-family: fantasy;
 }
 
 .name {
@@ -67,6 +87,8 @@
   margin-right: 4rem;
   padding-bottom: 4rem;
   color: red;
+  font: .75em;
+  font-family: fantasy;
 }
 
 .kanye {
@@ -81,11 +103,10 @@
 #kGray {
   display: block;
   justify-content: center;
-  /* margin-left: 7rem  !important; */
 }
 
 .grey-after:after {
-  /* color: rgb(50, 50, 40); */
+  color: rgb(50, 50, 40);
   color: purple;
   justify-content: center;
 }
@@ -100,15 +121,15 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 812px) {
   #dog {
     max-height: 20rem !important;
-   }
-   .head {
-     font-size: 1.8rem;
-     font-family: fantasy;
-    }
-   .name {
-     font-size: 1.5rem;
-     font-weight: 200;
-   }
+  }
+  .head {
+    font-size: 1.8rem;
+    font-family: fantasy;
+  }
+  .name {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
 }
 
 /* iPhone 5 */
@@ -121,7 +142,6 @@
     max-width: 18rem;
   }
 
-  .chaz,
   .kanye {
     margin-left: 2rem !important;
     margin-right: 2rem !important;
@@ -148,7 +168,6 @@
     max-height: 30rem;
   }
 
-  .chaz,
   .kanye {
     margin-left: 2rem !important;
     margin-right: 2rem !important;
@@ -172,10 +191,8 @@
 
   #dog {
     max-width: 25rem;
-
   }
 
-  .chaz,
   .kanye {
     margin-left: 2rem !important;
     margin-right: 2rem !important;
@@ -200,7 +217,6 @@
     max-width: 25rem;
   }
 
-  .chaz,
   .kanye {
     margin-left: 2rem !important;
     margin-right: 2rem !important;

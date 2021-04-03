@@ -90,8 +90,6 @@ class App extends Component {
           hyphen: " -",
           error: null,
         });
-        console.log(response.data.data[0].quoteText);
-        console.log(response.data.data[0].quoteAuthor);
       })
 
       .catch((err) => {
@@ -106,7 +104,7 @@ class App extends Component {
     await axios
       .get(QUOTE_API)
       .then((response) => {
-       this.setState({
+        this.setState({
           quoteText: response.data.data[0].quoteText,
           quoteAuthor: response.data.data[0].quoteAuthor,
           hyphen: "- ",
@@ -211,7 +209,7 @@ class App extends Component {
         </section>
         {/* End Buttons */}
 
-        {/* **** QUOTES **** */}
+        {/* QUOTES */}
 
         {/* Inspiration */}
         <h1 className="quote d-flex pt-4">"{this.state.quoteText}"</h1>
@@ -223,28 +221,26 @@ class App extends Component {
         {/* Kanye */}
         {showContent === true ? (
           <h1 onClick={this.toggleContent} className="kanye d-flex pt-4">
-            {this.state.quote}
+            "{this.state.quote}"
           </h1>
         ) : (
           ""
         )}
 
-        <div className="d-flex row ">
-          <div className="d-flex col justify-content-center text-center ">
-            <button
-              type="button"
-              id="kGray"
-              className="btn btn-outline-primary "
-              onClick={() => this.makeGray()}
+        <div className="d-flex col justify-content-center">
+          <button
+            type="button"
+            id="kGray"
+            className="btn btn-outline-danger btn-xs "
+            onClick={() => this.makeGray()}
+          >
+            <h3
+              onClick={this.toggleContent.bind(this)}
+              className="grey-after pt-2 fade2 kanye d-flex pb-2"
             >
-              <h3
-                onClick={this.toggleContent.bind(this)}
-                className="grey-after pt-4 fade2 kanye d-flex pb-4"
-              >
-               {this.state.name}
-              </h3>
-            </button>
-          </div>
+              {this.state.name}
+            </h3>
+          </button>
         </div>
 
         {/* Chuck */}
