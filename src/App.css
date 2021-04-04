@@ -1,6 +1,7 @@
 html,
 body {
   overflow-x: hidden !important;
+  overflow: inherit;
 }
 
 .btn {
@@ -83,11 +84,11 @@ body {
 .chaz {
   justify-content: center;
   display: block;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   padding-bottom: 4rem;
   color: red;
-  font: 1em;
+  font-size: 1rem;
   font-family: sans-serif;
 }
 
