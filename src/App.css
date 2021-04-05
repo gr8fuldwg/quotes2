@@ -6,20 +6,21 @@ body {
 
 .btn {
   display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    /* user-select: none; */
-    border: 1px solid inherit;
-    padding: 1%;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  /* user-select: none; */
+  border: 1px solid inherit;
+  padding: 1%;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .body {
@@ -72,7 +73,8 @@ body {
   margin-right: 4rem;
   color: white;
   font-weight: 500;
-  font-family: cursive;
+  font-family: "Amatic SC", cursive;
+  font-family: "Caveat", cursive;
 }
 
 .name {
@@ -125,7 +127,7 @@ body {
   }
   .head {
     font-size: 1.8rem;
-    font-family: fantasy;
+    font-family: "Caveat", cursive;
   }
   .name {
     font-size: 1.5rem;
@@ -186,7 +188,7 @@ body {
 /* iPhone 6/7/8 Plus */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
   .head {
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: fantasy;
     font-size: 1.8rem;
   }
 
