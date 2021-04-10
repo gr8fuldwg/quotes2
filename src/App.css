@@ -13,7 +13,6 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  /* user-select: none; */
   border: 1px solid inherit;
   padding: 1%;
   font-size: 1rem;
@@ -37,11 +36,10 @@ body {
   font-family: fantasy;
   font-size: 1.8rem;
   font-weight: 700;
-  padding-top: 2rem;
+  padding-top: 3rem;
+  text-shadow: 2px 3px black;
   margin-right: 2.5rem;
   margin-left: 2.5rem;
-  top: 0;
-  background-color: transparent;
 }
 
 #dog {
@@ -56,14 +54,39 @@ body {
   min-height: 20rem;
 }
 
+/*     BUTTONS     */
+
 #buttons {
   margin-top: 4rem;
+  padding-bottom: 2rem;
   justify-content: center;
-  /* justify-content: space-between; */
+}
+
+#chaz {
+  box-shadow: 5px 3px 18px;
 }
 
 #inspiration {
   margin-left: 2rem !important;
+  box-shadow: 5px 3px 18px;
+}
+
+#kanye-button {
+  box-shadow: 5px 3px 18px;
+}
+
+#dog-button {
+  box-shadow: 5px 3px 18px;
+}
+
+#quoteBubble {
+  background-color: rgb(40, 41, 41);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 1rem;
+  box-shadow: 10px 5px 15px 10px gray inset;
 }
 
 .quote {
@@ -72,61 +95,85 @@ body {
   margin-left: 4rem;
   margin-right: 4rem;
   color: white;
-  font-weight: 500;
+  font-weight: 700;
   font-family: "Amatic SC", cursive;
   font-family: "Caveat", cursive;
+  text-shadow: 5px 5px 5px black;
 }
 
 .name {
   font-family: fantasy;
   justify-content: center;
   font-weight: 700 !important;
+  text-shadow: 5px 5px 5px black;
 }
 
 .chaz {
   justify-content: center;
   display: block;
+  margin-top: 1rem;
   margin-left: 2rem;
   margin-right: 2rem;
-  padding-bottom: 4rem;
-  color: red;
-  font-size: 1rem;
-  font-family: sans-serif;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  background-color: red;
+  color: black;
+  font-size: 1.25 rem;
+  font-weight: 700;
+  font-family: fantasy;
+  border-radius: 1rem;
+  text-shadow: 5px 5px 5px gray;
+  box-shadow: 5px 5px 15px 10px rgb(90, 56, 56);
+}
+
+#kanye-quote {
+  background-color: yellow;
+  color: black;
+  font-size: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 1rem;
+  box-shadow: 10px 7px 10px 10px gray;
+  text-shadow: 10px 5px 5px gray;
+}
+
+.kanye-name {
+  color: black !important ;
+  border-radius: 1rem;
+  background-color: yellow;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-shadow: 10px 5px 15px 10px gray;
+  text-shadow: 5px 5px 5px gray;
 }
 
 .kanye {
   justify-content: center;
   display: block;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
   color: yellow;
   opacity: 1;
+  box-shadow: 5px 3px 18px;
+  box-shadow: 10px 5px 15px 10px gray;
 }
 
-#kGray {
-  display: block;
-  justify-content: center;
-}
-
-.grey-after:after {
-  color: rgb(50, 50, 40);
-  color: purple;
-  justify-content: center;
-}
-
-.chuckbutton {
-  padding: auto 4;
-  justify-content: center;
-}
-
-/* Responsive Design */
+/* RESPONSEVE DESIGN*/
 /* 320 - 812 px */
 @media only screen and (min-device-width: 320px) and (max-device-width: 812px) {
   #dog {
     max-height: 20rem !important;
   }
   .head {
-    font-size: 1.8rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
     font-family: "Caveat", cursive;
   }
   .name {
@@ -138,7 +185,9 @@ body {
 /* iPhone 5 */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .head {
+    padding-top: 2rem;
     margin-left: 1.8rem;
+    font-size: 1.5rem;
   }
 
   #dog {
@@ -163,7 +212,9 @@ body {
 /* iPhone 6/7/8 */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .head {
+    padding-top: 2rem;
     margin-left: 2.5rem;
+    font-size: 1.5rem;
   }
 
   #dog {
@@ -188,8 +239,9 @@ body {
 /* iPhone 6/7/8 Plus */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
   .head {
+    padding-top: 2rem;
     font-family: fantasy;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   #dog {
@@ -213,7 +265,9 @@ body {
 /* iPhone 10 */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
   .head {
+    padding-top: 2rem;
     margin-left: 2.5rem;
+    font-size: 1.5rem;
   }
 
   #dog {

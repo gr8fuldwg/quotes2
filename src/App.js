@@ -16,6 +16,7 @@ class App extends Component {
       on: false,
       imageURL: "",
       showContent: true,
+      // showContentQuote: true,
       error: null,
     };
 
@@ -25,17 +26,25 @@ class App extends Component {
     this.kanye = this.kanye.bind(this);
     this.dogs = this.dogs.bind(this);
     this.toggleContent = this.toggleContent.bind(this);
+    // this.toggleContentQuote = this.toggleContentQuote.bind(this);
     this.mount = this.componentWillMount.bind(this);
   }
 
-  makeGray() {
-    var k = document.getElementById("kGray");
-    var color = k.style.color;
-    k.addEventListener("click", function () {
-      // this function executes whenever the user clicks the button
-      color = k.style.color = color === "grey";
-    });
-  }
+  // makeGray() {
+  //   var k = document.getElementById("kGray");
+  //   var color = k.style.color;
+  //   k.addEventListener("click", function () {
+  //     // this function executes whenever the user clicks the button
+  //     color = k.style.color = color === "grey";
+  //   });
+  // }
+
+  // toggleContentQuote(event) {
+  //   event.preventDefault();
+  //   this.setState({
+  //     showContentQuote: !this.state.showContentQuote,
+  //   });
+  // }
 
   toggleContent(event) {
     event.preventDefault();
@@ -77,7 +86,6 @@ class App extends Component {
   }
 
   // 'Inspirational Quotes' Axios GET method
-
   quote() {
     axios
       .get(QUOTE_API)
@@ -161,6 +169,7 @@ class App extends Component {
   render() {
     const { imageURL } = this.state;
     const { showContent } = this.state;
+    // const { showContentQuote } = this.state;
 
     return (
       <div className="body">
@@ -174,7 +183,7 @@ class App extends Component {
           <button
             id="chaz"
             type="button"
-            className="chux chuckbutton btn btn-outline-danger"
+            className="chux btn btn-outline-danger"
             onClick={this.handle}
           >
             Chaz
@@ -193,6 +202,7 @@ class App extends Component {
           {/* Kanye */}
           <button
             type="button"
+            id="kanye-button"
             className="kanye btn btn-outline-warning"
             onClick={this.kanye}
           >
@@ -201,6 +211,7 @@ class App extends Component {
 
           <button
             type="button"
+            id="dog-button"
             className="btn btn-outline-primary"
             onClick={this.dogs}
           >
@@ -212,35 +223,43 @@ class App extends Component {
         {/* QUOTES */}
 
         {/* Inspiration */}
-        <h1 className="quote d-flex pt-4">"{this.state.quoteText}"</h1>
-        <h3 className="fade1 name d-flex pb-4">
-          {this.state.hyphen}
-          {this.state.quoteAuthor}
-        </h3>
+        {/* {showContentQuote === true ? ( */}
+          <section id="quoteBubble">
+            <h1
+              // onClick={this.toggleContentQuote.bind(this)}
+              className="quote d-flex pt-4"
+            >
+              "{this.state.quoteText}"
+            </h1>
+            <h3 className="fade1 name d-flex pb-4">
+              {this.state.hyphen}
+              {this.state.quoteAuthor}
+            </h3>
+          </section>
+        {/* ) : (
+          ""
+        )} */}
 
         {/* Kanye */}
         {showContent === true ? (
-          <h1 onClick={this.toggleContent} className="kanye d-flex pt-4">
+          <h1
+            onClick={this.toggleContent}
+            id="kanye-quote"
+            className="kanye d-flex pt-4"
+          >
             "{this.state.quote}"
           </h1>
         ) : (
           ""
         )}
 
-        <div className="d-flex col justify-content-center">
-          <button
-            type="button"
-            id="kGray"
-            className="btn btn-outline-danger btn-xs "
-            onClick={() => this.makeGray()}
+        <div className="d-flex pb-4 justify-content-center">
+          <h3
+            onClick={this.toggleContent.bind(this)}
+            className="d-flex kanye-name grey-after pt-2 fade2 pb-2"
           >
-            <h3
-              onClick={this.toggleContent.bind(this)}
-              className="grey-after pt-2 fade2 kanye d-flex pb-2"
-            >
-              {this.state.name}
-            </h3>
-          </button>
+            {this.state.name}
+          </h3>
         </div>
 
         {/* Chuck */}
