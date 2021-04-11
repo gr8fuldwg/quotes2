@@ -16,7 +16,6 @@ class App extends Component {
       on: false,
       imageURL: "",
       showContent: true,
-      // showContentQuote: true,
       error: null,
     };
 
@@ -26,25 +25,8 @@ class App extends Component {
     this.kanye = this.kanye.bind(this);
     this.dogs = this.dogs.bind(this);
     this.toggleContent = this.toggleContent.bind(this);
-    // this.toggleContentQuote = this.toggleContentQuote.bind(this);
     this.mount = this.componentWillMount.bind(this);
   }
-
-  // makeGray() {
-  //   var k = document.getElementById("kGray");
-  //   var color = k.style.color;
-  //   k.addEventListener("click", function () {
-  //     // this function executes whenever the user clicks the button
-  //     color = k.style.color = color === "grey";
-  //   });
-  // }
-
-  // toggleContentQuote(event) {
-  //   event.preventDefault();
-  //   this.setState({
-  //     showContentQuote: !this.state.showContentQuote,
-  //   });
-  // }
 
   toggleContent(event) {
     event.preventDefault();
@@ -169,12 +151,10 @@ class App extends Component {
   render() {
     const { imageURL } = this.state;
     const { showContent } = this.state;
-    // const { showContentQuote } = this.state;
 
     return (
       <div className="body">
         <h1 className="head">A wise dog once said...</h1>
-
         <img id="dog" src={imageURL} alt="dog" />
 
         {/* *** BUTTONS *** */}
@@ -220,32 +200,28 @@ class App extends Component {
         </section>
         {/* End Buttons */}
 
-        {/* QUOTES */}
+        {/*      QUOTES       */}
 
         {/* Inspiration */}
-        {/* {showContentQuote === true ? ( */}
-          <section id="quoteBubble">
-            <h1
-              // onClick={this.toggleContentQuote.bind(this)}
-              className="quote d-flex pt-4"
-            >
-              "{this.state.quoteText}"
-            </h1>
-            <h3 className="fade1 name d-flex pb-4">
-              {this.state.hyphen}
-              {this.state.quoteAuthor}
-            </h3>
-          </section>
-        {/* ) : (
-          ""
-        )} */}
+        <section id="quoteBubble">
+          <h1
+            className="quote d-flex pt-4"
+          >
+            "{this.state.quoteText}"
+          </h1>
+          <h3 className="fade1 name d-flex pb-4">
+            {this.state.hyphen}
+            {this.state.quoteAuthor}
+          </h3>
+        </section>
+
 
         {/* Kanye */}
         {showContent === true ? (
           <h1
             onClick={this.toggleContent}
             id="kanye-quote"
-            className="kanye d-flex pt-4"
+            className="kanye d-flex"
           >
             "{this.state.quote}"
           </h1>
@@ -263,7 +239,7 @@ class App extends Component {
         </div>
 
         {/* Chuck */}
-        <h1 className="fade3 chaz d-flex pt-4 pb-4">{this.state.value}</h1>
+        <h1 className="fade3 chaz d-flex pt-2 pb-2">{this.state.value}</h1>
       </div>
     );
   }
