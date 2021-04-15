@@ -163,7 +163,7 @@ class App extends Component {
           <button
             id="chaz"
             type="button"
-            className="chux btn btn-outline-danger"
+            className="btn btn-outline-danger"
             onClick={this.handle}
           >
             Chaz
@@ -204,24 +204,19 @@ class App extends Component {
 
         {/* Inspiration */}
         <section id="quoteBubble">
-          <h1
-            className="quote d-flex pt-4"
-          >
-            "{this.state.quoteText}"
-          </h1>
+          <h1 className="quote d-flex pt-4">"{this.state.quoteText}"</h1>
           <h3 className="fade1 name d-flex pb-4">
             {this.state.hyphen}
             {this.state.quoteAuthor}
           </h3>
         </section>
 
-
         {/* Kanye */}
         {showContent === true ? (
           <h1
             onClick={this.toggleContent}
             id="kanye-quote"
-            className="kanye d-flex"
+            className="kanye kanye-bubble d-flex"
           >
             "{this.state.quote}"
           </h1>
@@ -239,7 +234,9 @@ class App extends Component {
         </div>
 
         {/* Chuck */}
-        <h1 className="fade3 chaz d-flex pt-2 pb-2">{this.state.value}</h1>
+        <section id="chazBubble">
+          <h1 className="chaz d-flex pt-2 pb-2">{this.state.value}</h1>
+        </section>
       </div>
     );
   }

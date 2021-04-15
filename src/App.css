@@ -1,7 +1,25 @@
 html,
+
+
 body {
   overflow-x: hidden !important;
   overflow: inherit;
+  max-width: 100%;
+  width: 100%;
+  position: relative !important;
+  background-color: black;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .btn {
@@ -22,15 +40,13 @@ body {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.body {
+/* .body {
   background-color: black;
-  color: white;
-  max-width: 100%;
-  width: 100%;
-  position: relative !important;
-}
+
+} */
 
 .head {
+  color: white;
   display: flex;
   justify-content: center;
   font-family: "Homemade Apple", cursive;
@@ -63,25 +79,44 @@ body {
 }
 
 #chaz {
-  box-shadow: 5px 3px 18px;
+  color: rgb(90, 245, 90);
+  font-weight: 700;
+  background: linear-gradient(-45deg, #23d5ab, #23a6d5, #e73c7e, #ee7752);
+  background-size: 400% 400%;
+  animation: gradient 2.25s ease infinite;
+  box-shadow: 5px 3px 18px white;
 }
 
 #inspiration {
+  color: black;
+  font-weight: 700;
+  background: linear-gradient(-45deg, #ee7752, #23a6d5, #e73c7e,  #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 2.5s ease infinite;
   margin-left: 2rem !important;
-  box-shadow: 5px 3px 18px;
+  box-shadow: 5px 3px 18px white;
 }
 
 #kanye-button {
-  box-shadow: 5px 3px 18px;
+  color: yellow;
+  font-weight: 700;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 2.75s ease infinite;
+  box-shadow: 5px 3px 18px white;
 }
 
 #dog-button {
-  box-shadow: 5px 3px 18px;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 2.87s ease infinite;
+  box-shadow: 5px 3px 18px white;
 }
 
 #quoteBubble {
   background-color: rgb(40, 41, 41);
-  /* margin-top: 2rem; */
   margin-bottom: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -101,10 +136,21 @@ body {
 }
 
 .name {
+  color: white;
   font-family: "Caveat", fantasy;
   justify-content: center;
   font-weight: 700 !important;
   text-shadow: 5px 5px 5px black;
+}
+
+#chazBubble {
+  background-color: red;
+  /* margin-top: 2rem; */
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 15px 10px rgb(90, 56, 56);
 }
 
 .chaz {
@@ -114,22 +160,18 @@ body {
   margin-left: 2rem;
   margin-right: 2rem;
   padding-top: 0.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 0.5rem !important;
-  background-color: black;
-  color: red;
+  color: black;
   font-size: 2rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  border-radius: 1rem;
-  text-shadow: 5px 5px 5px gray;
-  box-shadow: 5px 5px 15px 10px rgb(90, 56, 56);
+  font-family: monospace;
+  text-shadow: 5px 3px 5px gray;
 }
 
 #kanye-quote {
-  background-color: yellow;
+  background-color: rgb(241, 255, 47);
   color: black;
   font-size: 2rem;
+  font-family: "Amatic SC", "Caveat", cursive;
+  font-weight: 800;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -139,18 +181,18 @@ body {
   margin-left: 2rem;
   margin-right: 2rem;
   border-radius: 1rem;
-  box-shadow: 10px 7px 10px 10px gray;
-  text-shadow: 10px 5px 5px gray;
+  box-shadow: 3px 5px 15px 10px grey;
+  text-shadow: 5px 5px 5px gray;
 }
 
 .kanye-name {
-  color: black !important ;
+  color: white !important ;
   border-radius: 1rem;
-  background-color: yellow;
+  background-color: rgb(241, 255, 47);
   padding-left: 1rem;
   padding-right: 1rem;
   box-shadow: 10px 5px 15px 10px gray;
-  text-shadow: 5px 5px 5px gray;
+  text-shadow: 5px 5px 5px rgb(49, 49, 49);
 }
 
 .kanye {
@@ -230,7 +272,7 @@ body {
     margin-bottom: 2rem;
     margin-left: 2rem;
     margin-right: 0.8rem;
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -248,13 +290,17 @@ body {
   .kanye {
     margin-left: 2rem !important;
     margin-right: 2rem !important;
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   .quote {
     margin-bottom: 2rem;
     margin-left: 2rem;
     margin-right: 0.8rem;
+    font-size: 2.4rem;
+  }
+
+  .name {
     font-size: 2rem;
   }
 }
@@ -264,7 +310,7 @@ body {
   .head {
     padding-top: 2rem;
     margin-left: 2.5rem;
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 
   #dog {
