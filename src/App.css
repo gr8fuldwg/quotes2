@@ -10,18 +10,6 @@ body {
   background-color: black;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -76,6 +64,18 @@ body {
   margin-top: 4rem;
   padding-bottom: 2rem;
   justify-content: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #chaz {
