@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
+import { Link } from "react-scroll";
 // import Quote from "./helpers.js/quote.js";
 
 // API URL variables
@@ -158,53 +159,65 @@ class App extends Component {
         <img id="dog" src={imageURL} alt="dog" />
 
         {/* *** BUTTONS *** */}
-        <section className="d-flex ml-2 mt-2 mr-2 mb-2 simple-button-animation" id="buttons">
+        <section className="d-flex ml-2 mt-2 mr-2 mb-2 " id="buttons">
           {/* Chuck */}
-          <button
-            id="chaz"
-            type="button"
-            className="btn btn-outline-danger animate__animated animate__pulse"
-            onClick={this.handle}
-          >
-            Chaz
-          </button>
+          <Link activeClass="active" to="chazBubble" spy={true} auto={true}>
+            <button
+              id="chaz"
+              className="pt-1 pb-1 pl-1 pr-1 btn btn-outline-danger"
+              type="button"
+              onClick={this.handle}
+            >
+              Chaz
+            </button>
+          </Link>
 
           {/* Inspiration */}
-          <button
-            id="inspiration"
-            type="button"
-            className="inspire ml-2 btn btn-dark "
-            onClick={this.mount}
-          >
-            Inspire
-          </button>
+          <Link to="quoteBubble" spy={true} auto={true}>
+            <button
+              id="inspiration"
+              type="button"
+              className="pt-1 pb-1 pl-1 pr-1 inspire ml-2 btn btn-dark "
+              onClick={this.mount}
+            >
+              Inspire
+            </button>
+          </Link>
 
           {/* Kanye */}
-          <button
-            type="button"
-            id="kanye-button"
-            className="kanye btn btn-outline-warning"
-            onClick={this.kanye}
-          >
-            Kanye
-          </button>
+          <Link to="kanye-quote" spy={true} auto={true}>
+            <button
+              type="button"
+              id="kanye-button"
+              className="pt-1 pb-1 pl-1 pr-1 kanye btn btn-outline-warning"
+              onClick={this.kanye}
+            >
+              Kanye
+            </button>
+          </Link>
 
-          <button
-            type="button"
-            id="dog-button"
-            className="btn btn-outline-primary"
-            onClick={this.dogs}
-          >
-            Dogs
-          </button>
+          <Link to="dog" spy={true} auto={true}>
+            <button
+              type="button"
+              id="dog-button"
+              className="pt-1 pb-1 pl-1 pr-1 btn btn-outline-primary"
+              onClick={this.dogs}
+            >
+              Dogs
+            </button>
+          </Link>
         </section>
         {/* End Buttons */}
 
-        {/*      QUOTES       */}
+        {/* QUOTES!!! */}
 
         {/* Inspiration */}
         <section id="quoteBubble">
-          <h1 onClick={this.mount} className="quote d-flex pt-4">
+          <h1
+            onClick={this.mount}
+            className="quote d-flex pt-4"
+            style={{ top: 0 }}
+          >
             "{this.state.quoteText}"
           </h1>
           <h3 className="fade1 name d-flex pb-4">
@@ -229,14 +242,14 @@ class App extends Component {
         <div className="d-flex pb-4 justify-content-center">
           <h3
             onClick={this.toggleContent.bind(this)}
-            className="d-flex kanye-name grey-after pt-2 fade2 pb-2 animate__animated animate__pulse"
+            className="d-flex kanye-name grey-after pt-2 fade2 pb-2"
           >
             {this.state.name}
           </h3>
         </div>
 
         {/* Chuck */}
-        <section id="chazBubble">
+        <section id="chazBubble" style={{ bottom: 0 }}>
           <h1 onClick={this.handle} className="chaz d-flex pt-2 pb-2">
             {this.state.value}
           </h1>

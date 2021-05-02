@@ -28,11 +28,6 @@ body {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-/* .body {
-  background-color: black;
-
-} */
-
 .head {
   color: white;
   display: flex;
@@ -64,6 +59,7 @@ body {
   margin-top: 4rem;
   padding-bottom: 2rem;
   justify-content: center;
+  position: sticky;
 }
 
 @keyframes gradient {
