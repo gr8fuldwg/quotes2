@@ -158,12 +158,12 @@ class App extends Component {
         <img id="dog" src={imageURL} alt="dog" />
 
         {/* *** BUTTONS *** */}
-        <section className="d-flex ml-2 mt-2 mr-2 mb-2" id="buttons">
+        <section className="d-flex ml-2 mt-2 mr-2 mb-2 simple-button-animation" id="buttons">
           {/* Chuck */}
           <button
             id="chaz"
             type="button"
-            className="btn btn-outline-danger"
+            className="btn btn-outline-danger animate__animated animate__pulse"
             onClick={this.handle}
           >
             Chaz
@@ -204,7 +204,9 @@ class App extends Component {
 
         {/* Inspiration */}
         <section id="quoteBubble">
-          <h1 className="quote d-flex pt-4">"{this.state.quoteText}"</h1>
+          <h1 onClick={this.mount} className="quote d-flex pt-4">
+            "{this.state.quoteText}"
+          </h1>
           <h3 className="fade1 name d-flex pb-4">
             {this.state.hyphen}
             {this.state.quoteAuthor}
@@ -214,7 +216,7 @@ class App extends Component {
         {/* Kanye */}
         {showContent === true ? (
           <h1
-            onClick={this.toggleContent}
+            onClick={this.kanye}
             id="kanye-quote"
             className="kanye kanye-bubble d-flex"
           >
@@ -227,7 +229,7 @@ class App extends Component {
         <div className="d-flex pb-4 justify-content-center">
           <h3
             onClick={this.toggleContent.bind(this)}
-            className="d-flex kanye-name grey-after pt-2 fade2 pb-2"
+            className="d-flex kanye-name grey-after pt-2 fade2 pb-2 animate__animated animate__pulse"
           >
             {this.state.name}
           </h3>
@@ -235,7 +237,9 @@ class App extends Component {
 
         {/* Chuck */}
         <section id="chazBubble">
-          <h1 className="chaz d-flex pt-2 pb-2">{this.state.value}</h1>
+          <h1 onClick={this.handle} className="chaz d-flex pt-2 pb-2">
+            {this.state.value}
+          </h1>
         </section>
       </div>
     );
