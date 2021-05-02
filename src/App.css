@@ -36,10 +36,10 @@ body {
   font-family: "Rock Salt", cursive;
   font-size: 8rem;
   font-weight: 700;
-  padding-top: 3rem;
+  padding-top: 1rem;
   margin-right: 2.5rem;
   margin-left: 2.5rem;
-}
+ }
 
 #dog {
   align-content: space-between;
@@ -54,13 +54,12 @@ body {
 }
 
 /*     BUTTONS     */
-
 #buttons {
+  position: sticky;
   margin-top: 4rem;
   padding-bottom: 2rem;
   justify-content: center;
-  position: sticky;
-}
+ }
 
 @keyframes gradient {
   0% {
@@ -100,6 +99,7 @@ body {
   background-size: 400% 400%;
   animation: gradient 2.75s ease infinite;
   box-shadow: 5px 3px 18px white;
+  
 }
 
 #dog-button {
@@ -141,7 +141,6 @@ body {
 
 #chazBubble {
   background-color: red;
-  /* margin-top: 2rem; */
   margin-bottom: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -203,28 +202,7 @@ body {
 }
 
 /* Animations */
-.simple-button-animation {
-  display: inline-block;
-  padding: 10px 20px;
-  color: white;
-  cursor: pointer;
-  background-color: mediumpurple;
-}
 
-.simple-button-animation:hover {
-  animation: myAnimation 1s ease-in-out forwards;
-}
-
-@keyframes myAnimation {
-  0% {
-      background-color: mediumpurple;
-      transform: rotate(0deg);
-    }
-  100% {
-      background-color: deeppink;
-      transform: rotate(360deg);
-  }
-}
 
 /* RESPONSEVE DESIGN*/
 /* 320 - 812 px */
@@ -274,7 +252,8 @@ body {
   .head {
     padding-top: 2rem;
     margin-left: 2.5rem;
-    font-size: 2.8rem;
+    font-size: 2rem;
+    font-family: "Homemade Apple", "Rock Salt", cursive;
   }
 
   #dog {
@@ -301,10 +280,17 @@ body {
   .head {
     padding-top: 2rem;
     font-size: 2rem;
+    font-family: "Homemade Apple", "Rock Salt", cursive;
+    position: sticky;
   }
 
   #dog {
     max-width: 25rem;
+    position: sticky;
+  }
+
+  #buttons {
+    position: sticky;
   }
 
   .kanye {

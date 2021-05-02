@@ -159,7 +159,7 @@ class App extends Component {
         <img id="dog" src={imageURL} alt="dog" />
 
         {/* *** BUTTONS *** */}
-        <section className="d-flex ml-2 mt-2 mr-2 mb-2 " id="buttons">
+        <section className="d-flex ml-2 mt-2 mr-2 mb-2" id="buttons">
           {/* Chuck */}
           <Link activeClass="active" to="chazBubble" spy={true} auto={true}>
             <button
