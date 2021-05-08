@@ -279,7 +279,7 @@ body {
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
   .head {
     padding-top: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: "Homemade Apple", "Rock Salt", cursive;
     position: sticky;
   }
@@ -289,9 +289,9 @@ body {
     position: sticky;
   }
 
-  #buttons {
+  /* #buttons {
     position: sticky;
-  }
+  } */
 
   .kanye {
     margin-left: 2rem !important;
@@ -316,7 +316,7 @@ body {
   .head {
     padding-top: 2rem;
     margin-left: 2.5rem;
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   #dog {
