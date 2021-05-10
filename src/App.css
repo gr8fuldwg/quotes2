@@ -213,7 +213,8 @@ body {
   }
   .head {
     padding-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 800;
     font-family: 'Nanum Pen Script', cursive;
   }
   .name {
@@ -227,7 +228,8 @@ body {
   .head {
     padding-top: 2rem;
     margin-left: 1.8rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 800;
     font-family: 'Nanum Pen Script', cursive;
   }
 
@@ -255,7 +257,8 @@ body {
   .head {
     padding-top: 2rem;
     margin-left: 2.5rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: 800;
     font-family: 'Nanum Pen Script', cursive;
   }
 
@@ -282,7 +285,8 @@ body {
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
   .head {
     padding-top: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 800;
     font-family: 'Nanum Pen Script', cursive;
   }
 
@@ -317,7 +321,8 @@ body {
   .head {
     padding-top: 2rem;
     margin-left: 2.5rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: 800;
     font-family: 'Nanum Pen Script', cursive;
   }
 
