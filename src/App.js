@@ -41,6 +41,7 @@ class App extends Component {
     await axios
       .get(DOGS_API)
       .then((response) => {
+        console.log("DOOOOGGGGOOOSSSS");
         this.setState({ imageURL: response.data.message });
       })
       .catch((error) => {
@@ -73,6 +74,7 @@ class App extends Component {
     axios
       .get(QUOTE_API)
       .then((response) => {
+        console.log("im in the API!");
         const { quoteText } = response.data.data[0].quoteText;
         const { quoteAuthor } = response.data.data[0].quoteAuthor;
         this.setState({
@@ -95,6 +97,7 @@ class App extends Component {
     await axios
       .get(QUOTE_API)
       .then((response) => {
+        console.log("Now im REALLY in the API!");
         this.setState({
           quoteText: response.data.data[0].quoteText,
           quoteAuthor: response.data.data[0].quoteAuthor,
@@ -160,27 +163,27 @@ class App extends Component {
 
         {/* *** BUTTONS *** */}
         <section className="d-flex ml-2 mt-2 mr-2 mb-2" id="buttons">
-          {/* Chuck */}
-          <Link activeClass="active" to="chazBubble" spy={true} auto={true}>
-            <button
-              id="chaz"
-              className="pt-1 pb-1 pl-1 pr-1 btn btn-outline-danger"
-              type="button"
-              onClick={this.handle}
-            >
-              Chaz
-            </button>
-          </Link>
-
           {/* Inspiration */}
           <Link to="quoteBubble" spy={true} auto={true}>
             <button
               id="inspiration"
               type="button"
-              className="pt-1 pb-1 pl-1 pr-1 inspire ml-2 btn btn-dark "
+              className="pt-1 pb-1 pl-1 pr-1 inspire btn btn-dark "
               onClick={this.mount}
             >
               Inspire
+            </button>
+          </Link>
+
+          {/* DOGS */}
+          <Link to="dog" spy={true} auto={true}>
+            <button
+              type="button"
+              id="dog-button"
+              className="pt-1 pb-1 pl-1 pr-1 btn btn-outline-primary"
+              onClick={this.dogs}
+            >
+              Dogs
             </button>
           </Link>
 
@@ -196,14 +199,15 @@ class App extends Component {
             </button>
           </Link>
 
-          <Link to="dog" spy={true} auto={true}>
+          {/* Chuck */}
+          <Link activeClass="active" to="chazBubble" spy={true} auto={true}>
             <button
+              id="chaz"
+              className="pt-1 pb-1 pl-1 pr-1 btn btn-outline-danger"
               type="button"
-              id="dog-button"
-              className="pt-1 pb-1 pl-1 pr-1 btn btn-outline-primary"
-              onClick={this.dogs}
+              onClick={this.handle}
             >
-              Dogs
+              Chaz
             </button>
           </Link>
         </section>

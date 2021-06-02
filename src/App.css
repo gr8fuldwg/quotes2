@@ -90,6 +90,7 @@ body {
   background-size: 400% 400%;
   animation: gradient 2.5s ease infinite;
   margin-left: 2rem !important;
+  margin-right: 2rem;
   box-shadow: 5px 3px 18px white;
 }
 
