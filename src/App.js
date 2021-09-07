@@ -192,7 +192,7 @@ class App extends Component {
             <button
               type="button"
               id="kanye-button"
-              className="pt-1 pb-1 pl-1 pr-1 kanye btn btn-outline-warning"
+              className="pt-1 pb-1 pl-1 pr-1  btn btn-outline-warning"
               onClick={this.kanye}
             >
               Kanye
