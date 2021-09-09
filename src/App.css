@@ -58,6 +58,7 @@ body {
   margin-top: 4rem;
   padding-bottom: 2rem;
   justify-content: center;
+  padding-right: 1rem;
 }
 
 @keyframes gradient {
@@ -71,15 +72,21 @@ body {
     background-position: 0% 50%;
   }
 }
+body div #dog-button {
+  color: black;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
 
-#chaz {
-  color: rgb(90, 245, 90);
+#dog-button {
+  color: white;
   font-weight: 700;
-  background: linear-gradient(-45deg, #23d5ab, #23a6d5, #e73c7e, #ee7752);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient 2.25s ease infinite;
+  animation: gradient 2.87s ease infinite;
   box-shadow: 5px 3px 18px white;
-  margin-left: 2rem;
+  padding-left: 2rem;
+  /* padding-right: 1rem; */
 }
 
 #inspiration {
@@ -88,7 +95,6 @@ body {
   background: linear-gradient(-45deg, #ee7752, #23a6d5, #e73c7e, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 2.5s ease infinite;
-  margin-right: 2rem;
   box-shadow: 5px 3px 18px white;
 }
 
@@ -100,14 +106,15 @@ body {
   animation: gradient 2.75s ease infinite;
   box-shadow: 5px 3px 18px white;
   margin-left: 2rem;
+  padding-right: 2rem;
 }
 
-#dog-button {
-  color: white;
+#chaz {
+  color: rgb(90, 245, 90);
   font-weight: 700;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #23d5ab, #23a6d5, #e73c7e, #ee7752);
   background-size: 400% 400%;
-  animation: gradient 2.87s ease infinite;
+  animation: gradient 2.25s ease infinite;
   box-shadow: 5px 3px 18px white;
 }
 

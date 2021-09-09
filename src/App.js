@@ -162,55 +162,57 @@ class App extends Component {
         <img id="dog" src={imageURL} alt="dog" />
 
         {/* *** BUTTONS *** */}
-        <section className="d-flex ml-2 mt-2 mr-2 mb-2" id="buttons">
-          {/* Inspiration */}
-          <Link to="quoteBubble" spy={true} auto={true}>
-            <button
-              id="inspiration"
-              type="button"
-              className="pt-1 pb-1 pl-1 pr-1 inspire btn btn-dark "
-              onClick={this.mount}
-            >
-              Inspire
-            </button>
-          </Link>
+        <container className="fluid">
+          <section className="d-flex ml-2 mt-2 mr-2 mb-2" id="buttons">
+            {/* DOGS */}
+            <Link to="dog" spy={true} auto={true}>
+              <button
+                type="button"
+                id="dog-button"
+                className="pt-1 pb-1 pl-1 pr-1 btn btn-outline-primary"
+                onClick={this.dogs}
+              >
+                Dogs
+              </button>
+            </Link>
 
-          {/* DOGS */}
-          <Link to="dog" spy={true} auto={true}>
-            <button
-              type="button"
-              id="dog-button"
-              className="pt-1 pb-1 pl-1 pr-1 btn btn-outline-primary"
-              onClick={this.dogs}
-            >
-              Dogs
-            </button>
-          </Link>
+            {/* Inspiration */}
+            <Link to="quoteBubble" spy={true} auto={true}>
+              <button
+                id="inspiration"
+                type="button"
+                className="pt-1 pb-1 pl-1 pr-1 inspire btn btn-dark "
+                onClick={this.mount}
+              >
+                Inspire
+              </button>
+            </Link>
 
-          {/* Kanye */}
-          <Link to="kanye-quote" spy={true} auto={true}>
-            <button
-              type="button"
-              id="kanye-button"
-              className="pt-1 pb-1 pl-1 pr-1  btn btn-outline-warning"
-              onClick={this.kanye}
-            >
-              Kanye
-            </button>
-          </Link>
+            {/* Kanye */}
+            <Link to="kanye-quote" spy={true} auto={true}>
+              <button
+                type="button"
+                id="kanye-button"
+                className="pt-1 pb-1 pl-1 pr-1  btn btn-outline-warning"
+                onClick={this.kanye}
+              >
+                Kanye
+              </button>
+            </Link>
 
-          {/* Chuck */}
-          <Link activeClass="active" to="chazBubble" spy={true} auto={true}>
-            <button
-              id="chaz"
-              className="pt-1 pb-1 pl-1 pr-1 btn btn-outline-danger"
-              type="button"
-              onClick={this.handle}
-            >
-              Chaz
-            </button>
-          </Link>
-        </section>
+            {/* Chuck */}
+            <Link activeClass="active" to="chazBubble" spy={true} auto={true}>
+              <button
+                id="chaz"
+                className="pt-1 pb-1 pl-1 pr-1 btn btn-outline-danger"
+                type="button"
+                onClick={this.handle}
+              >
+                Chaz
+              </button>
+            </Link>
+          </section>
+        </container>
         {/* End Buttons */}
 
         {/* QUOTES!!! */}
